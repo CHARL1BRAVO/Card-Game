@@ -20,7 +20,7 @@ export default function Home(props) {
       <PlayerNameInput imagePath='/images/Player2.png' inputPlaceholder='Name fo player 2' />
     </div>
     <div className='play-button-contaner'>
-      <button className='play-button' onClick={handleClick}>Let's Play</button>
+      <button className='play-button' type='submit' onClick={handleClick}>Let's Play</button>
     </div>
   </div>
   )

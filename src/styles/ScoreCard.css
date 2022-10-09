@@ -1,8 +1,49 @@
 .score-card-container {
-    border:solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 28px;
+    width: 220px;
+    height: 344px;
+    background: linear-gradient(160.65deg, rgba(255, 255, 255, 0.6) 0.74%, rgba(255, 255, 255, 0.1) 102.03%);
+    border-radius: 8px;
 }
 
 .player-score-card-logo {
-    border: solid black;
-    
+    width: 144px;
+    height: 180px;
+}
+
+.player-name {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.score {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;    
+}
+
+.player-cards {
+    padding-top: 12%;
+    display: flex;
+    justify-content: center;
+    gap: 64%;
+}
+
+.board {
+    position: absolute;
+    margin-top: 8%;
+    width: 842px;
+    height: 600px;
+    left: 300px;
+    top: 0px;
+    top: 0px;
+    background: linear-gradient(133.05deg, rgba(255, 255, 255, 0.6) 0.62%, rgba(255, 255, 255, 0.1) 102.4%);
+    border-radius: 8px;
 }
