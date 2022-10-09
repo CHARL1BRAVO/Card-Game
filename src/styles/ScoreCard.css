@@ -15,11 +15,18 @@
     height: 180px;
 }
 
-.player-name {
+.player-name-container {
     color: #ffffff;
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
+}
+
+.player-name {
+    word-wrap: break-word;
+    max-width: 210px;
+    max-height: 30px;
+    overflow: hidden;
 }
 
 .score {
