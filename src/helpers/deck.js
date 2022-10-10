@@ -9,12 +9,7 @@ function createDeck()
 	{
 		for(let x = 0; x < values.length; x++)
 		{
-            let color = ''
-            if (suits[i] === 'spades' || suits[i] === 'clubs'){
-                color = 'black'
-            } else {
-                color = 'red'
-            }
+            let color = (suits[i] === 'spades' || suits[i] === 'clubs') ? 'black':'red'
             let frontImage = `${values[x]}_${suits[i]}.png`
 
 			let card = {
@@ -22,7 +17,8 @@ function createDeck()
                 suit: suits[i],
                 color: color,
                 backImage: 'Card_Back.png',
-                frontImage: frontImage
+                frontImage: frontImage,
+                isFlipped: false
             };
                 
 			deck.push(card);
@@ -34,7 +30,8 @@ function createDeck()
         suit: 'Joker',
         color: 'black',
         backImage: 'Card_Back.png',
-        frontImage: 'Joker_1.png'
+        frontImage: 'Joker_1.png',
+        isFlipped: false
     };
 
     let redJoker = {
@@ -42,12 +39,12 @@ function createDeck()
         suit: 'Joker',
         color: 'red',
         backImage: 'Card_Back.png',
-        frontImage: 'Joker_2.png'
+        frontImage: 'Joker_2.png',
+        isFlipped: false
     };
 
     deck.push(blackJoker,redJoker)
 
-    console.log(deck)
 	return deck;
 }
 

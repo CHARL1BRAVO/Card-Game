@@ -1,7 +1,7 @@
 import '../styles/ScoreCard.css'
 
 export default function ScoreCard(props) {
-  return (
+  return (  
 
   <div className='score-card-container'>
     <img src={`${props.imagePath}`} className='player-score-card-logo' alt='Score Card'></img>
