@@ -29,6 +29,17 @@ const useGameStore = create(
         crd.isFlipped = !card.isFlipped;
       })
     ),
+    removeCardsFromDeck: (cards) => set(produce((draft) => {
+      draft.deck = get().deck.filter(c => !cards.includes(c))
+    })),
+    flipCardsBack: (cards) => set(produce((draft) => {
+      draft.deck = get().deck.map((c) => {
+        return {
+          ...c,
+          isFlipped: false
+        }
+      })
+    })),
 
     }),
     {

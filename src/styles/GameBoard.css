@@ -1,11 +1,15 @@
 .cards{
+    border: solid red;
     display: grid;
+    justify-content: center;
+    align-content: center;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     padding-left: 3%;
     padding-top: 2%;
+    padding-bottom: 2%;
     max-height: 100%;
 }
 
