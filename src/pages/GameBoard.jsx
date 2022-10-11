@@ -39,7 +39,7 @@ export default function GameBoard() {
             increasePlayer1Score();
             setIsMatch(true);
 
-            await setTimeout(() => {
+            setTimeout(() => {
               setIsMatch(false);
             }, 1000);
 
@@ -47,7 +47,7 @@ export default function GameBoard() {
             increasePlayer2Score();
             setIsMatch(true);
 
-            await setTimeout(() => {
+            setTimeout(() => {
               setIsMatch(false);
             }, 1000);
 
@@ -125,16 +125,6 @@ export default function GameBoard() {
           </div>
         )
       }
-
-
-      {/* <div className="board">
-        <div className="cards">
-          {deck.map((card, i) => (
-            <Card card={card} key={i} onClick={() => handleClick(card)} />
-          ))}
-        </div>
-      </div> */}
-
     </div>
   );
 }
