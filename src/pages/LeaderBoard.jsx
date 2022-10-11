@@ -8,11 +8,11 @@ export default function LeaderBoard() {
   const player2Name = useGameStore((state) => state.player2Name);
   const player1Score = useGameStore((state) => state.player1Score);
   const player2Score = useGameStore((state) => state.player2Score); 
-  const winnerImage = player1Score > player2Score ? '/images/player1.png' : '/images/player2.png'
+  const winnerImage = player1Score > player2Score ? '/images/Player1.png' : '/images/Player2.png'
   const winnerScore = player1Score > player2Score ? player1Score : player2Score
   const winnerName = player1Score > player2Score ? player1Name : player2Name
 
-  const loserImage = player1Score < player2Score ? '/images/player1.png' : '/images/player2.png'
+  const loserImage = player1Score < player2Score ? '/images/Player1.png' : '/images/Player2.png'
   const loserScore = player1Score < player2Score ? player1Score : player2Score
   const loserName = player1Score < player2Score ? player1Name : player2Name
   return (
