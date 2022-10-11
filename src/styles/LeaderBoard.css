@@ -25,3 +25,18 @@
     left: 554px;
     top: 200px;
 }
+
+.result-cards {
+    display: grid;
+    margin-top: 20%;
+    justify-content: center;
+    align-content: center;
+}
+
+.play-again-button-leaderboard {
+    display: grid;
+    margin-top: 5%;
+    margin-left: 5%;
+    justify-content: center;
+    align-content: center;
+}

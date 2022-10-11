@@ -2,8 +2,10 @@ import "../styles/WinBoard.css";
 
 export default function WinBoard(props) {
   return (
-    <>
-    {props.placement === '1st Place' && (<img src="/images/Cup.png"></img>)}
+  <div className="winner-contaner">
+    <div className="winner-cup">
+      {props.placement === '1st Place' && (<img src="/images/Cup.png"></img>)}
+    </div>
     <div className={`${props.placement === '1st Place' ? 'victor' : ''} leader-board-container`}>
       <img src={`${props.imagePath}`} className="player-score-card-logo" alt="leader Card"></img>
       <div className="placement">
@@ -16,6 +18,6 @@ export default function WinBoard(props) {
         <p>Score: {props.score}</p>
       </div>
     </div>
-    </>
+  </div>
   );
 }

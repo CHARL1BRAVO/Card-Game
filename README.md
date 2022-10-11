@@ -1,3 +1,14 @@
+
+### Game instructionz
+
+- Enter player names
+
+- The objective of the game is to get as many points as possible by finding matches of cards based on the value and color (joker's will match each other)
+
+- By finding a match you will receive a point and another turn.
+
+- The player with the most points wins.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -12,7 +12,7 @@ export default function PlayAgainButton() {
     resetGame();
     const deck = createDeck();
     shuffleDeck(deck)
-    setDeck(shuffleDeck)
+    setDeck(deck)
 
     navigate("/gameboard");
   }

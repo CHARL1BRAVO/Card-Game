@@ -19,14 +19,20 @@ export default function LeaderBoard() {
     <div>
         <p className="well-done">Well Done!</p>
         <p className="winner">{winnerName}</p>
-        <div>
-            <img src='/images/LeaderBoard.png' className="player-winner-logo" alt="winner astronaut logo"></img>
-        </div>
+          <div>
+              <img src='/images/LeaderBoard.png' className="player-winner-logo" alt="winner astronaut logo"></img>
+          </div>
         <div className="result-cards">
-            <WinBoard imagePath={winnerImage} score={winnerScore} playerName={winnerName} placement='1st Place'  />
-            <WinBoard imagePath={loserImage} score={loserScore} playerName={loserName} placement='2nd Place'  />
+           <div>
+              <WinBoard imagePath={winnerImage} score={winnerScore} playerName={winnerName} placement='1st Place'  />
+           </div>
+           <div>
+              <WinBoard imagePath={loserImage} score={loserScore} playerName={loserName} placement='2nd Place'  />
+           </div>
+           <div className="play-again-button-leaderboard">
+            <PlayAgainButton />
+           </div>
         </div>
-        <PlayAgainButton />
     </div>
   );
 }
