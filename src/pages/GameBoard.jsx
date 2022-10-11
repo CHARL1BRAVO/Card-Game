@@ -6,6 +6,7 @@ import { useGameStore } from "../store/store";
 import PlayerTurn from "../components/PlayerTurn";
 import { useEffect, useState } from "react";
 import ResetButton from "../components/buttons/ResetButton";
+import { useNavigate } from "react-router-dom";
 
 export default function GameBoard() {
   const [preventFlipping, setPreventFlipping] = useState(false);
@@ -24,8 +25,15 @@ export default function GameBoard() {
   const togglePlayerTurn = useGameStore((state) => state.togglePlayerTurn);
 
   const deck = useGameStore((state) => state.deck);
+  const navigate = useNavigate()
 
   useEffect(() => {
+    setTimeout(() => {
+      const cardsLeftCount = deck.filter((c) => !c.removed).length
+      if(cardsLeftCount === 0) {
+        navigate('/leaderboard')
+    } 
+    },2000);
     setPreventFlipping(false);
 
     const flippedCards = deck.filter((card) => card.isFlipped);
@@ -69,6 +77,7 @@ export default function GameBoard() {
     setCardsAsRemoved,
     togglePlayerTurn,
     isMatch,
+    navigate,
   ]);
 
   const evaluateMatch = (card1, card2) => {

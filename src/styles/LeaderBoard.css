@@ -1,0 +1,27 @@
+.well-done {
+    padding-top: 6%;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.18px;
+    color: #FFFFFF;
+}
+
+.winner {
+    padding-top: 3%;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.18px;
+    color: #FFFFFF;
+}
+
+.player-winner-logo {
+    position: absolute;
+    width: 332px;
+    height: 232px;
+    left: 554px;
+    top: 200px;
+}

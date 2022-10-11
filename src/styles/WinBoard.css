@@ -1,0 +1,33 @@
+.leader-board-container {
+    border: solid red;
+    display: flex;
+    width: 535px;
+    height: 101.37px;
+    left: 0px;
+    top: 112.63px;
+    background: #FFFFFF;
+    border-radius: 11.2632px;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 2%;
+    padding-right: 5%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    color: #0D4477;
+}
+
+.victor {
+    background: linear-gradient(92.15deg, #FFD975 35.31%, #FFFFFF 135.61%);
+}
+
+.player-score-card-logo {
+    width: 54px;
+    height: 70px;
+}
+
+.placement {
+    font-weight: 700;
+}

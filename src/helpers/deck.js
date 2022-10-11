@@ -4,23 +4,23 @@ var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 function createDeck() {
   let deck = [];
 
-  for (let i = 0; i < suits.length; i++) {
-    for (let x = 0; x < values.length; x++) {
-      let color = suits[i] === "spades" || suits[i] === "clubs" ? "black" : "red";
-      let frontImage = `${values[x]}_${suits[i]}.png`;
+  // for (let i = 0; i < suits.length; i++) {
+  //   for (let x = 0; x < values.length; x++) {
+  //     let color = suits[i] === "spades" || suits[i] === "clubs" ? "black" : "red";
+  //     let frontImage = `${values[x]}_${suits[i]}.png`;
 
-      let card = {
-        value: values[x],
-        suit: suits[i],
-        color: color,
-        backImage: "Card_Back.png",
-        frontImage: frontImage,
-        isFlipped: false,
-      };
+  //     let card = {
+  //       value: values[x],
+  //       suit: suits[i],
+  //       color: color,
+  //       backImage: "Card_Back.png",
+  //       frontImage: frontImage,
+  //       isFlipped: false,
+  //     };
 
-      deck.push(card);
-    }
-  }
+  //     deck.push(card);
+  //   }
+  // }
 
   let blackJoker = {
     value: "Joker",

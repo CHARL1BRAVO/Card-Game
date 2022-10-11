@@ -1,0 +1,16 @@
+.play-again-button {
+    padding: 20px 16px;
+    width: 164px;
+    height: 56px;
+    background: #A7DAFF;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #164464;
+    cursor: pointer;
+}
