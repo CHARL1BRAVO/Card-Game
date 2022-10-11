@@ -3,11 +3,11 @@ import { useGameStore } from "../../store/store";
 import "../../styles/ExitGameButtonStyles.css";
 
 export default function ExitGameButton() {
-  const exitGameReset = useGameStore((state) => state.exitGameReset)
+  const exitGameReset = useGameStore((state) => state.exitGameReset);
 
   let navigate = useNavigate();
   function handleClick() {
-    exitGameReset()
+    exitGameReset();
 
     navigate("/");
   }

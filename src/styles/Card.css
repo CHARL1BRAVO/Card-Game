@@ -3,6 +3,10 @@
   width: 65%;
   cursor: pointer;
 }
+card-container-blank {
+  height: 85px;
+  width: 65%;
+}
 
 .card-logo {
   width: 100%;

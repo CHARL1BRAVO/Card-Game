@@ -45,7 +45,7 @@
   border-radius: 8px;
   background-repeat: no-repeat;
   background-size: 80%;
-  background-image: url('/public/images/Match_Backround.png');
+  background-image: url("/public/images/Match_Backround.png");
   background-position: center;
   z-index: 1;
 }

@@ -3,14 +3,14 @@ import { persist } from "zustand/middleware";
 import produce from "immer";
 
 const DEFAULT_STATE = {
-    player1Name: "",
-    player2Name: "",
-    player1Score: 0,
-    player2Score: 0,
-    deck: [],
-    player1Turn: true,
-    gameInProgress: false,
-}
+  player1Name: "",
+  player2Name: "",
+  player1Score: 0,
+  player2Score: 0,
+  deck: [],
+  player1Turn: true,
+  gameInProgress: false,
+};
 
 const useGameStore = create(
   persist(
@@ -32,10 +32,13 @@ const useGameStore = create(
             crd.isFlipped = !card.isFlipped;
           })
         ),
-      removeCardsFromDeck: (cards) =>
+      setCardsAsRemoved: (cards) =>
         set(
           produce((draft) => {
-            draft.deck = get().deck.filter((c) => !cards.includes(c));
+            cards.forEach((c) => {
+              const crd = draft.deck.find((el) => el.value === c.value && el.suit === c.suit && el.color === c.color);
+              crd.removed = true;
+            });
           })
         ),
       flipCardsBack: () =>
@@ -49,8 +52,9 @@ const useGameStore = create(
             });
           })
         ),
-        exitGameReset: () => set(DEFAULT_STATE),
-      }),
+      exitGameReset: () => set(DEFAULT_STATE),
+      resetGame: () => set({ player1Score: 0, player2Score: 0, player1Turn: true }),
+    }),
     {
       name: "game-storage",
     }
