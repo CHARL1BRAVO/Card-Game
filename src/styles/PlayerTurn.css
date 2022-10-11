@@ -1,15 +1,15 @@
 .player-turn {
-    background: #0AB169;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 220px;
-    height: 64px;
-    left: 47px;
-    top: 740px;
-    font-weight: 700;
-    font-size: 28px;
-    color: #FFFFFF;
+  background: #0ab169;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 64px;
+  left: 47px;
+  top: 740px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #ffffff;
 }

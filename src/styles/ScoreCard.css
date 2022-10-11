@@ -1,55 +1,55 @@
 .score-card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 28px;
-    width: 220px;
-    height: 344px;
-    background: linear-gradient(160.65deg, rgba(255, 255, 255, 0.6) 0.74%, rgba(255, 255, 255, 0.1) 102.03%);
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 28px;
+  width: 220px;
+  height: 344px;
+  background: linear-gradient(160.65deg, rgba(255, 255, 255, 0.6) 0.74%, rgba(255, 255, 255, 0.1) 102.03%);
+  border-radius: 8px;
 }
 
 .player-score-card-logo {
-    width: 144px;
-    height: 180px;
+  width: 144px;
+  height: 180px;
 }
 
 .player-name-container {
-    color: #ffffff;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 24px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
 }
 
 .player-name {
-    word-wrap: break-word;
-    max-width: 210px;
-    max-height: 30px;
-    overflow: hidden;
+  word-wrap: break-word;
+  max-width: 210px;
+  max-height: 30px;
+  overflow: hidden;
 }
 
 .score {
-    color: #ffffff;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;    
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
 }
 
 .player-cards {
-    padding-top: 12%;
-    display: flex;
-    justify-content: center;
-    gap: 64%;
+  padding-top: 12%;
+  display: flex;
+  justify-content: center;
+  gap: 64%;
 }
 
 .board {
-    position: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 3%;
-    margin-left: 20%;
-    margin-right: 20%;
-    background: linear-gradient(133.05deg, rgba(255, 255, 255, 0.6) 0.62%, rgba(255, 255, 255, 0.1) 102.4%);
-    border-radius: 8px;
+  position: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 3%;
+  margin-left: 20%;
+  margin-right: 20%;
+  background: linear-gradient(133.05deg, rgba(255, 255, 255, 0.6) 0.62%, rgba(255, 255, 255, 0.1) 102.4%);
+  border-radius: 8px;
 }
