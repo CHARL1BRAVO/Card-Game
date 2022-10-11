@@ -3,13 +3,11 @@ import { useGameStore } from "../../store/store";
 import "../../styles/ExitGameButtonStyles.css";
 
 export default function ExitGameButton() {
-  const setPlayer1Name = useGameStore((state) => state.setPlayer1Name);
-  const setPlayer2Name = useGameStore((state) => state.setPlayer2Name);
+  const exitGameReset = useGameStore((state) => state.exitGameReset)
 
   let navigate = useNavigate();
   function handleClick() {
-    setPlayer1Name("");
-    setPlayer2Name("");
+    exitGameReset()
 
     navigate("/");
   }

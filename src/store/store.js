@@ -2,16 +2,20 @@ import create from "zustand";
 import { persist } from "zustand/middleware";
 import produce from "immer";
 
+const DEFAULT_STATE = {
+    player1Name: "",
+    player2Name: "",
+    player1Score: 0,
+    player2Score: 0,
+    deck: [],
+    player1Turn: true,
+    gameInProgress: false,
+}
+
 const useGameStore = create(
   persist(
     (set, get) => ({
-      player1Name: "",
-      player2Name: "",
-      player1Score: 0,
-      player2Score: 0,
-      deck: [],
-      player1Turn: true,
-      gameInProgress: false,
+      ...DEFAULT_STATE,
 
       increasePlayer1Score: () => set({ player1Score: get().player1Score + 1 }),
       increasePlayer2Score: () => set({ player2Score: get().player2Score + 1 }),
@@ -45,7 +49,8 @@ const useGameStore = create(
             });
           })
         ),
-    }),
+        exitGameReset: () => set(DEFAULT_STATE),
+      }),
     {
       name: "game-storage",
     }

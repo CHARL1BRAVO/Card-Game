@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function GameBoard() {
   const [preventFlipping, setPreventFlipping] = useState(false);
+  const [isMatch, setIsMatch] = useState(false);
 
   const player1Name = useGameStore((state) => state.player1Name);
   const player2Name = useGameStore((state) => state.player2Name);
@@ -25,18 +26,31 @@ export default function GameBoard() {
 
   useEffect(() => {
     setPreventFlipping(false);
+
     const flippedCards = deck.filter((card) => card.isFlipped);
     if (flippedCards.length === 2) {
       setPreventFlipping(true);
       const [card1, card2] = flippedCards;
 
       if (evaluateMatch(card1, card2)) {
-        setTimeout(() => {
+        setTimeout(async () => {
           removeCardsFromDeck([card1, card2]);
           if (player1Turn) {
             increasePlayer1Score();
+            setIsMatch(true);
+
+            await setTimeout(() => {
+              setIsMatch(false);
+            }, 1000);
+
           } else {
             increasePlayer2Score();
+            setIsMatch(true);
+
+            await setTimeout(() => {
+              setIsMatch(false);
+            }, 1000);
+
           }
         }, 1000);
       } else {
@@ -45,6 +59,7 @@ export default function GameBoard() {
           togglePlayerTurn();
         }, 1000);
       }
+
     }
   }, [
     deck,
@@ -54,6 +69,7 @@ export default function GameBoard() {
     player1Turn,
     removeCardsFromDeck,
     togglePlayerTurn,
+    isMatch,
   ]);
 
   const evaluateMatch = (card1, card2) => {
@@ -87,13 +103,38 @@ export default function GameBoard() {
         {!player1Turn && <PlayerTurn />}
       </div>
 
-      <div className="board">
+
+      { isMatch === true ? ( 
+        // If true
+        <div className="board-flipped">
+          <div className="cards-flipped">
+            {deck.map((card, i) => (
+              <Card card={card} key={i} onClick={() => handleClick(card)} />
+            ))}
+          </div>
+        </div>
+        ) : 
+        // If false
+        (
+          <div className="board">
+            <div className="cards">
+              {deck.map((card, i) => (
+                <Card card={card} key={i} onClick={() => handleClick(card)} />
+              ))}
+            </div>
+          </div>
+        )
+      }
+
+
+      {/* <div className="board">
         <div className="cards">
           {deck.map((card, i) => (
             <Card card={card} key={i} onClick={() => handleClick(card)} />
           ))}
         </div>
-      </div>
+      </div> */}
+
     </div>
   );
 }

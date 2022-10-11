@@ -42,14 +42,3 @@
   justify-content: center;
   gap: 64%;
 }
-
-.board {
-  position: flex;
-  justify-content: center;
-  align-content: center;
-  margin-top: 3%;
-  margin-left: 20%;
-  margin-right: 20%;
-  background: linear-gradient(133.05deg, rgba(255, 255, 255, 0.6) 0.62%, rgba(255, 255, 255, 0.1) 102.4%);
-  border-radius: 8px;
-}
